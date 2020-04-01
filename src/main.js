@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-Vue.config.productionTip = false
+import '../src/assets/yummy/index.js'
+import '../static/yummy/index.css'
+
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
