@@ -19,11 +19,11 @@ export default new Router({
   routes: [
     { path: '/', name: 'home' , component: home,
       children: [
-        { path: '/home/installation', name: 'installation', component: installation},
-        { path: '/home/quickstart', name: 'quickstart', component: quickstart},
-        { path: '/home/layout', name: 'layout', component: layout},
-        { path: '/home/container', name: 'container', component: container},
-        { path: '/home/color', name: 'color', component: color},
+        { path: '/home/installation', name: 'installation', component: installation, meta: {title: '安装'}},
+        { path: '/home/quickstart', name: 'quickstart', component: quickstart, meta: {title: '快速上手'}},
+        { path: '/home/layout', name: 'layout', component: layout, meta: {title: 'Layout布局'}},
+        { path: '/home/container', name: 'container', component: container, meta: {title: 'Container布局容器'}},
+        { path: '/home/color', name: 'color', component: color, meta: {title: 'Color色彩'}},
       ]
     }
   ]
