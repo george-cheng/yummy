@@ -13,6 +13,7 @@ import quickstart from './pages/guide/quickstart'
 import layout from './pages/assembly/layout'
 import container from './pages/assembly/container'
 import color from './pages/assembly/color'
+import popover from './pages/other/popover'
 
 export default new Router({
   mode: 'history',
@@ -24,6 +25,7 @@ export default new Router({
         { path: '/home/layout', name: 'layout', component: layout, meta: {title: 'Layout布局'}},
         { path: '/home/container', name: 'container', component: container, meta: {title: 'Container布局容器'}},
         { path: '/home/color', name: 'color', component: color, meta: {title: 'Color色彩'}},
+        { path: '/component/popover', name: 'popover', component: popover, meta: {title: 'Popover 弹出框'}},
       ]
     }
   ]
