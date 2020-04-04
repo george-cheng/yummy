@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import 'jquery'
+
 /* 展示页面相关 */
 import '../src/assets/pagesAssets/pagesIndex.js'
 import '../static/pagesStatic/pagesIndex.css'
@@ -13,6 +15,7 @@ import '../static/pagesStatic/pagesIndex.css'
 import '../src/assets/yummy/index.js'
 import '../static/yummy/index.css'
 
+import 'font-awesome/css/font-awesome.min.css'
 
 Vue.config.productionTip = false;
 

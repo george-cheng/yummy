@@ -73,6 +73,7 @@
       }
     },
     created() {
+      console.log($);
     }
   }
 </script>
