@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* 组件公共样式 */
+.yumMain {
+  width: 900px;
+  float: right;
+}
+.tit p {
+  font-size: 28px;
+}
+.smTit {
+  margin: 50px 0 20px 0;
+  font-size: 22px;
+}
+.smInfo {
+  margin: 14px 0 0;
+}
+.smInfo p {
+  font-size: 14px;
+  color: #5e6d82;
+}
+.infoCode .exCode {
+  background-color: #fafafa;
+  padding: 18px 24px;
+  border: 1px solid #eaeefb;
+  border-radius: 4px;
+  display: block;
+}
+.exPrev {
+  white-space: pre;
+  display: block;
+}
+/*# sourceMappingURL=common.css.map */

@@ -7,6 +7,9 @@
   width: 1140px;
   margin: 0 auto;
 }
+.yummy {
+  padding-top: 50px;
+}
 .yummy .yumLft {
   width: 240px;
   float: left;

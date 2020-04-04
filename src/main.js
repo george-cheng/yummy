@@ -4,8 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+/* 展示页面相关 */
+import '../src/assets/pagesAssets/pagesIndex.js'
+import '../static/pagesStatic/pagesIndex.css'
+
+
+/* 组件相关 */
 import '../src/assets/yummy/index.js'
 import '../static/yummy/index.css'
+
 
 Vue.config.productionTip = false;
 
@@ -22,4 +29,4 @@ router.beforeEach((to,from,next)=>{
     document.title = to.meta.title
   }
   next()
-})
+});
