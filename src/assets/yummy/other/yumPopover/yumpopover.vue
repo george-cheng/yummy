@@ -23,7 +23,7 @@
 </template>
 
 <script>
-    import {on, off} from '../../utils'
+    import {on, off} from '../../../utils'
 
     export default {
         name: "yum-popover",
