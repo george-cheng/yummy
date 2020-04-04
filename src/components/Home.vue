@@ -8,7 +8,7 @@
         <div v-for="(item,index) in leftList" :key="index">
           <div class="lftTit">{{item.title}}</div>
           <div class="lftAss">
-            <p class="assList" :class="{assListOn: assListNum===items.num}" @click="leftMenuEvent(items,index)" v-for="(items,index) in item.lftData" :key="index">{{items.name}}</p>
+            <p class="assList" :class="{assListOn: $router.history.current.path===items.url}" @click="leftMenuEvent(items,index)" v-for="(items,index) in item.lftData" :key="index">{{items.name}}</p>
           </div>
         </div>
       </div>
@@ -59,6 +59,11 @@
                 "num": "4",
                 "name": "Color色彩",
                 "url": "/home/color"
+              },
+              {
+                "num": "5",
+                "name": "Popover 弹出框",
+                "url": "/component/popover"
               }
             ]
 
@@ -73,11 +78,18 @@
       }
     },
     created() {
-      console.log($);
     }
   }
 </script>
 
-<style scoped>
+<style scoped lang="less">
+
+  .yummy {
+    display: flex;
+
+    .yumrgt {
+      flex: 1;
+    }
+  }
 
 </style>

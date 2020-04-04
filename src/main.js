@@ -15,6 +15,9 @@ import '../static/pagesStatic/pagesIndex.css'
 import '../src/assets/yummy/index.js'
 import '../static/yummy/index.css'
 
+import { Popover } from '../src/assets/yummy/index';
+Vue.use(Popover);
+
 import 'font-awesome/css/font-awesome.min.css'
 
 Vue.config.productionTip = false;
