@@ -3,7 +3,7 @@
     <div class="yumMain">
 
 
-      <yum-main-title title="安装"></yum-main-title>
+      <yum-main-title title="安装1"></yum-main-title>
 
       <yum-main-sub-title subTitle="npm安装"></yum-main-sub-title>
 
