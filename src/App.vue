@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" ref="app">
     <router-view></router-view>
 
     <div
@@ -36,6 +36,9 @@ export default {
   name: 'App',
   mixins: [live2dmixin],
   created() {
+    setTimeout(()=>{
+      $("body").css("overflow-y","hidden")
+    },0)
   }
 }
 </script>

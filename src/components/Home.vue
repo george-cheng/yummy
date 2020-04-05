@@ -4,16 +4,23 @@
 
     </div>
     <div class="yummy">
-      <div class="yumLft">
+
+      <div class="yumLft" ref="yumLft" :style="{height: scrollLftHeight}" @mouseover="mouseLftOver" @mouseout="mouseLftOut">
         <div v-for="(item,index) in leftList" :key="index">
           <div class="lftTit">{{item.title}}</div>
           <div class="lftAss">
-            <p class="assList" :class="{assListOn: $router.history.current.path===items.url}" @click="leftMenuEvent(items,index)" v-for="(items,index) in item.lftData" :key="index">{{items.name}}</p>
+            <p class="assList" :class="{assListOn: $router.history.current.path===items.url}"
+               @click="leftMenuEvent(items,index)" v-for="(items,index) in item.lftData" :key="index">{{items.name}}</p>
           </div>
         </div>
       </div>
-      <div class="yumrgt">
+
+      <div class="yumRgt" ref="yumRgt" @scroll="scrollEvent"  :style="{height: scrollRgtHeight}">
         <router-view></router-view>
+      </div>
+
+      <div class="backTop" v-if="isBackTop" @click="backTopEvent">
+        <p class="upArrow i-upArrow"></p>
       </div>
     </div>
   </div>
@@ -25,6 +32,9 @@
     data() {
       return {
         assListNum: "0",
+        scrollLftH: '',
+        scrollRgtH: '',
+        isBackTop: false,
         leftList: [
           {
             "title": "开发指南",
@@ -66,30 +76,61 @@
                 "url": "/component/popover"
               }
             ]
-
-          }
+          },
         ]
       }
     },
     methods: {
-      leftMenuEvent(items){
+      leftMenuEvent(items) {
         this.assListNum = items.num;
         this.$router.push(items.url)
-      }
+      },
+      mouseLftOver() {
+        let clientLftHeight = document.documentElement.clientHeight;
+        let offsetLftTop = this.$refs.yumLft.getBoundingClientRect();
+        this.scrollLftH = clientLftHeight - offsetLftTop.y;
+        if (clientLftHeight > this.scrollLftH) {
+          $(".yumLft").css("overflow-y", "scroll")
+        }
+      },
+      mouseLftOut() {
+        $(".yumLft").css("overflow-y", "hidden")
+      },
+      scrollEvent(){
+        let scroll = this.$refs.yumRgt.scrollTop;
+        if(scroll > 100){
+          this.isBackTop = true
+        }else{
+          this.isBackTop = false
+        }
+      },
+      backTopEvent() {
+        this.$refs.yumRgt.scrollTop = 0
+      },
+    },
+    computed: {
+      scrollLftHeight() {
+        return this.scrollLftH + 'px'
+      },
+      scrollRgtHeight() {
+        return this.scrollRgtH + 'px'
+      },
+
     },
     created() {
+      setTimeout(() => {
+        let clientRgtHeight = document.documentElement.clientHeight;
+        let offsetRgtTop = this.$refs.yumRgt.getBoundingClientRect();
+        this.scrollRgtH = clientRgtHeight - offsetRgtTop.y;
+        if (clientRgtHeight > this.scrollLftH) {
+          $(".yumRgt").css("overflow-y", "scroll")
+        }
+      }, 0)
     }
   }
 </script>
 
 <style scoped lang="less">
 
-  .yummy {
-    display: flex;
-
-    .yumrgt {
-      flex: 1;
-    }
-  }
 
 </style>

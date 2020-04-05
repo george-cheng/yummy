@@ -16,3 +16,22 @@ Vue.use(yummainsminfo);
 import yummainurllink from '@/assets/pagesAssets/yummainurllink/yummainurllink.js'
 Vue.use(yummainurllink);
 
+/* 代码区域 */
+import yummaincode from '@/assets/pagesAssets/yummaincode/yummaincode.js'
+Vue.use(yummaincode);
+
+/* 备注区域 */
+import yummaintip from '@/assets/pagesAssets/yummaintip/yummaintip.js'
+Vue.use(yummaintip);
+
+/* 主体页面布局 */
+import yummainpage from '@/assets/pagesAssets/yummainpage/yummainpage.js'
+Vue.use(yummainpage);
+
+/* 主体页面布局 */
+import yummainbtmswitch from '@/assets/pagesAssets/yummainbtmswitch/yummainbtmswitch.js'
+Vue.use(yummainbtmswitch);
+
+
+/* 引用自定义字体图标 */
+import '@/assets/pagesAssets/iconfont/style.css'

@@ -1,6 +1,7 @@
 <template>
-    <div>
-        快速上手
+  <div>
+    <yum-main-page #yumMain>
+    </yum-main-page>
     </div>
 </template>
 

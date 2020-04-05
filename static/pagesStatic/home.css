@@ -9,10 +9,11 @@
 }
 .yummy {
   padding-top: 50px;
+  display: flex;
 }
 .yummy .yumLft {
   width: 240px;
-  float: left;
+  margin-right: 4px;
 }
 .yummy .yumLft .lftTit {
   font-size: 16px;
@@ -29,7 +30,6 @@
 }
 .yummy .yumRgt {
   width: 900px;
-  float: right;
-  border: 1px solid #333;
+  padding-left: 20px;
 }
 /*# sourceMappingURL=home.css.map */

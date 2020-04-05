@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* 右箭头 */
+.i-rgtArrow:before{
+  font-family: 'icomoon' !important;
+  content: "\e900";
+}
+
+/* 左箭头 */
+.i-lftArrow:before{
+  font-family: 'icomoon' !important;
+  content: "\e901";
+}
+
+/* 向上的箭头 */
+.i-upArrow:before{
+  font-family: 'icomoon' !important;
+  content: "\e902";
+}

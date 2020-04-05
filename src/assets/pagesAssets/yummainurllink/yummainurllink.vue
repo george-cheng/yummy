@@ -1,9 +1,7 @@
 <template>
 
   <div>
-    <span class="link" @click="clickEvent">
-    &nbsp;{{urlName}}&nbsp;
-      </span>
+    <span class="link" @click="clickEvent">&nbsp;{{urlName}}&nbsp;</span>
   </div>
 
 </template>

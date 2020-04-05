@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .flex{
+      display: flex;
+    }
+    .lft{
+      width: 100px;
+      height: 1000px;
+      border: 1px solid #49a9ea;
+    }
+    .rgt{
+      width: 200px;
+      height: 3000px;
+      border: 1px solid #333;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+<div class="flex">
+  <div class="lft" onmouseover="mouseOver()" onmouseout="mouseOut()"></div>
+<div class="rgt"></div>
+</div>
+<script src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+  function mouseOver(){
+    $("body").parent().css("overflow-y","hidden");
+
+  }
+
+  function mouseOut(){
+    $("body").parent().css("overflow-y","scroll");
+  }
+
+</script>
+</body>
+</html>

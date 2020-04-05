@@ -6,4 +6,7 @@ pre {
   padding: 0;
   color: #333;
 }
+html {
+  overflow-y: hidden;
+}
 /*# sourceMappingURL=reset.css.map */
