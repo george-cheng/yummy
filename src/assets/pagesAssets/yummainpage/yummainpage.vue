@@ -2,6 +2,19 @@
   <div class="yumMain">
     <slot name="yumMain"></slot>
 
+
+    <!--<div>-->
+      <!--<table width="100%">-->
+        <!--<thead>-->
+          <!--<tr>-->
+            <!--<slot name="tbListHead"></slot>-->
+          <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+          <!--<slot name="tbListBody"></slot>-->
+        <!--</tbody>-->
+      <!--</table>-->
+    <!--</div>-->
   </div>
 </template>
 

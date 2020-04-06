@@ -14,14 +14,59 @@
       </yum-main-sm-info>
 
       <yum-main-code>
-        <template #prevCode><p>未上传到npm仓库,此功能待定!  （o(￣┰￣*)ゞ</p></template>
+        <template #prevCode>
+          <p>cnpm install yummyui -S</p>
+          <p>由于出现某种神秘情况,暂不能使用npm下载</p>
+          <p>1.0.0版本出现路径错误,请手动修改,后续将会改正</p>
+        </template>
       </yum-main-code>
 
       <yum-main-tip>
         <template #mainTip><p>我们建议使用 CDN 引入 Element 的用户在链接地址上锁定版本，以免将来 Element 升级时受到非兼容性更新的影响。锁定版本的方法请查看<yum-main-url-link url="https://unpkg.com/" urlName="unpkg.com"></yum-main-url-link></p></template>
       </yum-main-tip>
 
-    <yum-main-btm-switch prevTit="上一级" prevUrl="/home/layout" nextTit="下一级" nextUrl="/home/container"></yum-main-btm-switch>
+      <yum-main-tpl-show>
+        <template #tplShow>
+          <input type="text" value="1111">
+        </template>
+        <template #tplInfo>
+
+          组件说明
+
+        </template>
+        <template #tplCode>
+
+          <div v-pre>&lt;div&gt; 11111  &lt;/div&gt;   </div>
+          <div v-pre>&lt;div&gt; 3222  &lt;/div&gt;   </div>
+          <div v-pre>&lt;div&gt; 333333  &lt;/div&gt;   </div>
+
+        </template>
+      </yum-main-tpl-show>
+
+
+      <yum-main-table-head>
+        <template #listTbHead>
+          <yum-main-th style="width: 100px;" title="参数"></yum-main-th>
+          <yum-main-th style="width: 300px;" title="说明"></yum-main-th>
+          <yum-main-th style="width: 200px;" title="类型"></yum-main-th>
+          <yum-main-th style="width: 200px;" title="可选值"></yum-main-th>
+          <yum-main-th style="width: 100px;" title="默认值"></yum-main-th>
+        </template>
+      </yum-main-table-head>
+      <yum-main-table-body>
+        <template #listTbBody>
+          <tr v-for="(item,index) in 10">
+            <yum-main-td value="11111"></yum-main-td>
+            <yum-main-td value="22222"></yum-main-td>
+            <yum-main-td value="33333"></yum-main-td>
+            <yum-main-td value="44444"></yum-main-td>
+            <yum-main-td value="55555"></yum-main-td>
+          </tr>
+        </template>
+      </yum-main-table-body>
+
+
+      <yum-main-btm-switch prevTit="上一级" prevUrl="/home/layout" nextTit="下一级" nextUrl="/home/container"></yum-main-btm-switch>
 
     </yum-main-page>
   </div>
@@ -33,6 +78,6 @@
   }
 </script>
 
-<style scoped>
+<style>
 
 </style>
