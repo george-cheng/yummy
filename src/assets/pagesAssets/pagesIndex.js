@@ -36,24 +36,25 @@ Vue.use(yummainbtmswitch);
 import yummaintplshow from './yummaintplshow/yummaintplshow.js'
 Vue.use(yummaintplshow);
 
-/* 表格头部 */
-import yummaintablehead from './yummaintable/yummaintablehead/yummaintablehead.js'
-Vue.use(yummaintablehead);
+/* 表格模块 */
+import yummainshowtable from './yummaintable/yummainshowtable/yummainshowtable'
+Vue.use(yummainshowtable);
 
-/* 表格主体 */
-import yummaintablebody from './yummaintable/yummaintablebody/yummaintablebody.js'
-Vue.use(yummaintablebody);
+/* td */
+import yummaintd from './yummaintable/td/yummaintd/yummaintd.js'
+Vue.use(yummaintd);
 
-/* 表格th */
-import yummaintbth from './yummaintable/th/yummainth/yummaintbth.js'
-Vue.use(yummaintbth);
+import yummaintdcenter from './yummaintable/td/yummaintdcenter/yummaintdcenter.js'
+Vue.use(yummaintdcenter);
 
-/* 表格td */
-import yummaintbtd from './yummaintable/td/yummaintbtd/yummaintbtd.js'
-Vue.use(yummaintbtd);
-/* 表格td */
+/* th */
+import yummainth from './yummaintable/th/yummainth/yummainth.js'
+Vue.use(yummainth);
+
 import yummainthcenter from './yummaintable/th/yummainthcenter/yummainthcenter.js'
 Vue.use(yummainthcenter);
+
+
 
 /* 引用自定义字体图标 */
 import './iconfont/style.css'

@@ -1,14 +1,12 @@
 <template>
-  <th :style="getWidth" class="tdLft">
-    {{title}}
-  </th>
+    <th :style="getWidth" class="thLft">{{value}}</th>
 </template>
 
 <script>
   export default {
     name: "yum-main-th",
     props: {
-      title: {
+      value: {
         type: String,
         default: ''
       },
@@ -18,7 +16,7 @@
       }
     },
     computed: {
-      getWidth() {
+      getWidth(){
         return this.width === "" ? "" : "width:" + this.width + "px"
       }
     }

@@ -9,7 +9,8 @@
         <template #mainSmInfo>
           <p>推荐使用 npm 的方式安装，它能更好地和
             <yum-main-url-link url="https://webpack.js.org/" urlName="webpack"></yum-main-url-link>
-            打包工具配合使用。</p>
+            打包工具配合使用。
+          </p>
         </template>
       </yum-main-sm-info>
 
@@ -22,7 +23,11 @@
       </yum-main-code>
 
       <yum-main-tip>
-        <template #mainTip><p>我们建议使用 CDN 引入 Element 的用户在链接地址上锁定版本，以免将来 Element 升级时受到非兼容性更新的影响。锁定版本的方法请查看<yum-main-url-link url="https://unpkg.com/" urlName="unpkg.com"></yum-main-url-link></p></template>
+        <template #mainTip>
+          <p>我们建议使用 CDN 引入 Element 的用户在链接地址上锁定版本，以免将来 Element 升级时受到非兼容性更新的影响。锁定版本的方法请查看
+            <yum-main-url-link url="https://unpkg.com/" urlName="unpkg.com"></yum-main-url-link>
+          </p>
+        </template>
       </yum-main-tip>
 
       <yum-main-tpl-show>
@@ -36,34 +41,47 @@
         </template>
         <template #tplCode>
 
-          <div v-pre>&lt;div&gt; 11111  &lt;/div&gt;   </div>
-          <div v-pre>&lt;div&gt; 3222  &lt;/div&gt;   </div>
-          <div v-pre>&lt;div&gt; 333333  &lt;/div&gt;   </div>
+          <div v-pre>&lt;div&gt; 11111 &lt;/div&gt;</div>
+          <div v-pre>&lt;div&gt; 3222 &lt;/div&gt;</div>
+          <div v-pre>&lt;div&gt; 333333 &lt;/div&gt;</div>
 
         </template>
       </yum-main-tpl-show>
 
-
-      <yum-main-table-head>
-        <template #listTbHead>
-          <yum-main-th style="width: 100px;" title="参数"></yum-main-th>
-          <yum-main-th style="width: 300px;" title="说明"></yum-main-th>
-          <yum-main-th style="width: 200px;" title="类型"></yum-main-th>
-          <yum-main-th style="width: 200px;" title="可选值"></yum-main-th>
-          <yum-main-th style="width: 100px;" title="默认值"></yum-main-th>
+      <yum-main-show-table>
+        <template #listHead>
+          <yum-main-th style="width: 100px" value="参数"></yum-main-th>
+          <yum-main-th style="width: 300px" value="说明"></yum-main-th>
+          <yum-main-th style="width: 100px" value="类型"></yum-main-th>
+          <yum-main-th style="width: 200px" value="可选值"></yum-main-th>
+          <yum-main-th style="width: 100px" value="默认值"></yum-main-th>
         </template>
-      </yum-main-table-head>
-      <yum-main-table-body>
-        <template #listTbBody>
-          <tr v-for="(item,index) in 10">
-            <yum-main-td value="11111"></yum-main-td>
-            <yum-main-td value="22222"></yum-main-td>
-            <yum-main-td value="33333"></yum-main-td>
-            <yum-main-td value="44444"></yum-main-td>
-            <yum-main-td value="55555"></yum-main-td>
+        <template #listBody>
+          <tr>
+            <yum-main-td value="11"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
+          </tr>
+          <tr>
+            <yum-main-td value="11"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
+          </tr>
+          <tr>
+            <yum-main-td value="2222222222222222222222222222222222222222222222222"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
+            <yum-main-td value="11"></yum-main-td>
           </tr>
         </template>
-      </yum-main-table-body>
+
+
+      </yum-main-show-table>
 
 
       <yum-main-btm-switch prevTit="上一级" prevUrl="/home/layout" nextTit="下一级" nextUrl="/home/container"></yum-main-btm-switch>
@@ -73,9 +91,7 @@
 </template>
 
 <script>
-  export default {
-    name: "installation"
-  }
+
 </script>
 
 <style>

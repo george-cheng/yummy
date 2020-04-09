@@ -1,14 +1,10 @@
 <template>
-  <td>
-    <div>
-    {{value}}
-    </div>
-  </td>
+  <td class="tdMid">{{value}}</td>
 </template>
 
 <script>
   export default {
-    name: "yum-main-td",
+    name: "yum-main-td-center",
     props: {
       value: {
         type: String,

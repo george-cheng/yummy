@@ -1,14 +1,12 @@
 <template>
-  <th :style="getWidth" class="tdMid">
-    {{title}}
-  </th>
+  <th :style="getWidth" class="thMid">{{value}}</th>
 </template>
 
 <script>
   export default {
     name: "yum-main-th-center",
     props: {
-      title: {
+      value: {
         type: String,
         default: ''
       },
@@ -18,7 +16,7 @@
       }
     },
     computed: {
-      getWidth() {
+      getWidth(){
         return this.width === "" ? "" : "width:" + this.width + "px"
       }
     }
